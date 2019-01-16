@@ -1,0 +1,79 @@
+#my-table {
+    width: 100%;
+    border-collapse: collapse !important;
+    border-spacing: 0px !important;
+  
+    td {
+      border: 1px solid #e4e7e7 !important;
+  
+      p {
+        padding: 12px 0;
+        // height: 38px;
+        // width: 39px;
+        box-sizing: border-box !important;
+        color: $color-midnight;
+        font-size: 14px !important;
+        text-align: center !important;
+        margin: 0;
+      }
+  
+      &.today {
+        background-color: $color-azure;
+        border-color: $color-azure;
+        opacity: 0.5;
+  
+        p {
+          color: white;
+        }
+      }
+  
+      &.week-header {
+        &:hover {
+          cursor: pointer;
+        }
+  
+        &.after-date {
+          background-color: $color-azure;
+          opacity: 0.5;
+        }
+  
+        &.selected,
+        &.after-date {
+          background-color: $color-azure;
+          p {
+            color: $color-zircon;
+          }
+        }
+  
+        &.before-date:hover {
+          background-color: $color-heather;
+        }
+      }
+    }
+  }
+  
+  .empty {
+    color: #bbbbbb;
+    visibility: hidden;
+  
+    &.last-month {
+      color: #f3f0f0;
+    }
+  
+    &.next-month {
+      color: #f3f0f0;
+    }
+  
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    #my-table {
+      td {
+        width: 70px;
+        height: 69px;
+      }
+    }
+  }
